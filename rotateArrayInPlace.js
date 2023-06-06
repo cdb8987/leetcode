@@ -31,8 +31,9 @@ var rotate = function(nums, k) {
         }
     
     }
-    function unshiftBySubK(nums, k){                            
-        for(let i=0; i<k; i++){     //  0(n)
+    function unshiftBySubK(nums, k){    
+        // The nested for loop below looks like O(n^2) but j decreases as i increases and vice versa.                            
+        for(let i=0; i<k; i++){     //  0(n)     
             for(let j = 0; j< ((nums.length / k)-1); j++){ //0(n)
                 a_value = nums[i]  //declaring 3 values 0(1)
                 b_value = nums[i + j*k]
